@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Four Years to a Top IT Offer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f8;--surf:#fff;--ink:#12203d;--mut:#5b6784;--line:#d6ddec;--acc:#2f5bff;--accsoft:#e3eaff;--gold:#d99a14;--ok:#12805c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1526;--surf:#162039;--ink:#eaf0ff;--mut:#9aa8c7;--line:#2a3757;--acc:#7b9bff;--accsoft:#1f2d57;--gold:#f0b73a;--ok:#4fd1a0}}
+:root[data-theme="dark"]{--bg:#0e1526;--surf:#162039;--ink:#eaf0ff;--mut:#9aa8c7;--line:#2a3757;--acc:#7b9bff;--accsoft:#1f2d57;--gold:#f0b73a;--ok:#4fd1a0}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;line-height:1.1;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font:800 18px "Bricolage Grotesque",sans-serif}
+.logo i{color:var(--gold);font-style:normal}
+button{font:inherit;cursor:pointer;color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.tbtn{border:1px solid var(--line);background:var(--surf);border-radius:99px;padding:6px 14px}
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:36px 0 56px}
+.hero h1{font-size:clamp(38px,6vw,68px);font-weight:800;letter-spacing:-.03em}
+.hero p{color:var(--mut);max-width:46ch;font-size:18px;margin:18px 0 26px}
+.cta{background:var(--acc);color:#fff;border:0;border-radius:12px;padding:14px 24px;font-weight:700;text-decoration:none;display:inline-block}
+:root[data-theme="dark"] .cta{color:#0e1526}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cta{color:#0e1526}}
+.stairs{background:var(--surf);border:1px solid var(--line);border-radius:22px;padding:22px}
+.stairs svg{width:100%;height:auto;display:block}
+.stairs .cap{display:flex;justify-content:space-between;color:var(--mut);font-size:14px;margin-top:8px}
+.step rect{fill:var(--accsoft);transition:fill .5s}
+.step.done rect{fill:var(--acc)}
+.step text{fill:var(--ink);font:700 13px "DM Sans",sans-serif}
+.step.done text{fill:#fff}
+/* progress */
+.prog{display:flex;gap:18px;align-items:center;background:var(--surf);border:1px solid var(--line);border-radius:18px;padding:18px 22px;margin-bottom:28px}
+.bar{flex:1;height:10px;background:var(--accsoft);border-radius:9px;overflow:hidden}
+.bar b{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--gold));transition:width .5s}
+.pct{font:800 30px "Bricolage Grotesque",sans-serif;min-width:70px;text-align:right}
+/* tabs */
+h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.02em}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0}
+.tab{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:12px 14px;text-align:left}
+.tab small{display:block;color:var(--mut)}
+.tab strong{font-family:"Bricolage Grotesque",sans-serif;font-size:18px}
+.tab[aria-selected="true"]{border-color:var(--acc);box-shadow:inset 0 -4px 0 var(--acc)}
+.panel{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:18px;padding:24px}
+.card h3{font-size:22px;margin-bottom:6px}
+.sub{color:var(--mut);margin:0 0 16px}
+.task{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line);cursor:pointer}
+.task input{width:20px;height:20px;accent-color:var(--acc);margin-top:3px;flex:none}
+.task span b{display:block}
+.task span small{color:var(--mut)}
+.task input:checked+span b{text-decoration:line-through;color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0;list-style:none}
+.chips li{background:var(--accsoft);border-radius:99px;padding:4px 12px;font-size:14px;font-weight:500}
+.goal{border-left:4px solid var(--gold);padding-left:14px;margin-top:18px}
+.goal b{font-family:"Bricolage Grotesque",sans-serif;font-size:20px}
+/* final */
+.final{margin:56px 0 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:20px}
+.grid .card{padding:20px}
+.grid .card p{margin:6px 0 0;color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:14px;padding:20px 0 40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.reset{background:none;border:0;text-decoration:underline;color:var(--mut)}
+@media (max-width:820px){.hero,.panel{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(2,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.nl{display:flex;gap:18px;align-items:center}.nl a{color:var(--mut);text-decoration:none;font-weight:500}.nl a:hover{color:var(--ink)}
+.paths{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px}.paths span{color:var(--mut);font-weight:500;margin-right:4px}
+.pb{border:1px solid var(--line);background:var(--surf);border-radius:99px;padding:7px 16px;font-weight:500}.pb[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#fff}
+:root[data-theme="dark"] .pb[aria-pressed="true"]{color:#0e1526}
+.wide{grid-column:1/-1}.tier{position:relative}.tier .lpa{font:800 30px "Bricolage Grotesque",sans-serif;color:var(--gold);margin:4px 0}
+.tier ul{margin:10px 0 0;padding-left:18px;color:var(--mut);font-size:15px}.tier.top{border-color:var(--gold)}
+.note{color:var(--mut);font-size:14px;margin-top:12px}.res a{color:var(--acc);font-weight:700;text-decoration:none}.res a:hover{text-decoration:underline}
+section.blk{margin:56px 0 0}
+@media (max-width:620px){.nl a{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><span class="logo">Offer<i>Path</i></span><span class="nl"><a href="#roadmap">Roadmap</a><a href="#packages">Packages</a><a href="#resources">Resources</a><a href="#mistakes">Mistakes</a><button class="tbtn" id="theme" aria-label="Switch colour theme">Switch theme</button></span></nav>
+
+<header class="hero">
+<div>
+<h1>Four years from first line of code to a top IT offer.</h1>
+<p>A semester-by-semester plan for students aiming at high-paying software roles. Tick off tasks as you finish them and your progress is saved in this browser.</p>
+<a class="cta" href="#roadmap">Start year 1</a>
+</div>
+<div class="stairs" aria-label="Staircase showing four years of progress">
+<svg viewBox="0 0 400 250" role="img" aria-label="Four steps rising from year 1 to year 4">
+<g class="step" id="s0"><rect x="10" y="170" width="85" height="70" rx="8"/><text x="22" y="210">Year 1</text></g>
+<g class="step" id="s1"><rect x="107" y="125" width="85" height="115" rx="8"/><text x="119" y="210">Year 2</text></g>
+<g class="step" id="s2"><rect x="204" y="80" width="85" height="160" rx="8"/><text x="216" y="210">Year 3</text></g>
+<g class="step" id="s3"><rect x="301" y="35" width="85" height="205" rx="8"/><text x="313" y="210">Year 4</text></g>
+<circle cx="343" cy="18" r="9" fill="var(--gold)"/>
+</svg>
+<div class="cap"><span>Foundations</span><span>High-package offer</span></div>
+</div>
+</header>
+
+<section id="roadmap">
+<div class="prog"><div><small style="color:var(--mut)">Overall progress</small><div id="count" style="font-weight:700">0 of 0 tasks</div></div><div class="bar"><b id="fill"></b></div><div class="pct" id="pct">0%</div></div>
+<h2>Your four-year roadmap</h2>
+<div class="paths" id="paths" role="group" aria-label="Choose your track"></div>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="panel" id="panel" role="tabpanel"></div>
+</section>
+
+<section class="final">
+<h2>What top recruiters check</h2>
+<div class="grid">
+<div class="card"><h3>Problem solving</h3><p>Around 300 well-chosen problems, with the patterns you can explain out loud.</p></div>
+<div class="card"><h3>Real projects</h3><p>Three deployed projects with a README, a live link and clear commits.</p></div>
+<div class="card"><h3>Experience</h3><p>Two internships or open-source contributions on your resume.</p></div>
+<div class="card"><h3>Communication</h3><p>Mock interviews, a clean resume and a profile that shows your work.</p></div>
+</div>
+</section>
+
+<section class="blk" id="packages">
+<h2>What each package level needs</h2>
+<div class="grid">
+<div class="card tier"><h3>Solid start</h3><div class="lpa">4-8 LPA</div><p class="sub">Large IT services companies, mostly through campus drives.</p><ul><li>Strong basics in one language</li><li>Aptitude and reasoning practice</li><li>CS fundamentals and 1 project</li></ul></div>
+<div class="card tier"><h3>Strong offer</h3><div class="lpa">10-20 LPA</div><p class="sub">Product startups and mid-size tech companies.</p><ul><li>250+ problems solved</li><li>2 deployed projects</li><li>One internship</li></ul></div>
+<div class="card tier top"><h3>Top tier</h3><div class="lpa">25+ LPA</div><p class="sub">Top product companies and high-growth firms.</p><ul><li>400+ problems, with hard ones</li><li>System design and strong internship</li><li>Open-source or standout project</li></ul></div>
+</div>
+<p class="note">Ranges are indicative and vary by company, city and hiring year. Check current offers on company career pages and placement reports.</p>
+</section>
+
+<section class="blk" id="resources">
+<h2>Free resources to start with</h2>
+<div class="grid res">
+<div class="card"><h3>Learn to code</h3><p><a href="https://cs50.harvard.edu" target="_blank" rel="noopener">CS50</a> and <a href="https://www.freecodecamp.org" target="_blank" rel="noopener">freeCodeCamp</a> cover Year 1 and web basics.</p></div>
+<div class="card"><h3>Practise DSA</h3><p><a href="https://leetcode.com" target="_blank" rel="noopener">LeetCode</a> and <a href="https://neetcode.io" target="_blank" rel="noopener">NeetCode</a> give you problems grouped by pattern.</p></div>
+<div class="card"><h3>Pick a track</h3><p><a href="https://roadmap.sh" target="_blank" rel="noopener">roadmap.sh</a> shows the skills for each role in detail.</p></div>
+<div class="card"><h3>Show your work</h3><p><a href="https://github.com" target="_blank" rel="noopener">GitHub</a> hosts your code, and pairs well with a deployed site.</p></div>
+</div>
+</section>
+
+<section class="blk" id="mistakes">
+<h2>Five mistakes that cost offers</h2>
+<div class="grid">
+<div class="card"><h3>Tutorial hopping</h3><p>Finish one course, then build something without a guide.</p></div>
+<div class="card"><h3>Starting late</h3><p>Internship and placement doors open a year before you think.</p></div>
+<div class="card"><h3>Only solving, never explaining</h3><p>Interviews score how you talk through a solution.</p></div>
+<div class="card"><h3>Empty GitHub</h3><p>Recruiters check it. Commit weekly and write READMEs.</p></div>
+<div class="card"><h3>Ignoring CS subjects</h3><p>OS, DBMS and networks show up in almost every interview.</p></div>
+</div>
+</section>
+
+<footer><span>Timelines are a guide. Adjust the plan to your college calendar.</span><button class="reset" id="reset">Reset progress</button></footer>
+</div>
+
+<script>
+var Y=[
+{t:"Year 1",n:"Build the base",d:"Learn to think in code and get comfortable with the tools.",
+ tasks:[["Pick one language: Python, Java or C++","Finish a full beginner course and write 50 small programs."],["Learn Git and GitHub","Push every project and keep a green contribution graph."],["Master basic maths and logic","Discrete maths, probability and number systems."],["Learn programming fundamentals","Loops, functions, recursion, OOP and basic arrays."],["Build 2 small projects","A calculator, a quiz app or a text-based game."],["Solve 80 easy problems","Use LeetCode, HackerRank or CodeChef."]],
+ skills:["Python / Java / C++","Git","Linux basics","Logic"],goal:"Goal: confident programmer with 80 problems solved."},
+{t:"Year 2",n:"Core computer science",d:"Data structures, algorithms and the subjects interviews are built on.",
+ tasks:[["Study data structures in depth","Arrays, linked lists, stacks, queues, trees, graphs, heaps, hashing."],["Learn algorithms","Sorting, searching, DP, greedy, backtracking and graph traversal."],["Solve 150 problems, mostly medium","Track patterns such as two pointers and sliding window."],["Learn DBMS, OS and networks","Write short notes you can revise before interviews."],["Learn web basics","HTML, CSS, JavaScript and one backend framework."],["Join a coding contest each month","Build speed and calm under time pressure."]],
+ skills:["DSA","SQL","OS","Networks","JavaScript"],goal:"Goal: 230 problems solved and a rating in at least one contest."},
+{t:"Year 3",n:"Projects and internships",d:"Prove you can build real products and work with a team.",
+ tasks:[["Build 3 full-stack projects","One with login, one with a database, one with an API you deploy."],["Learn system design basics","Scaling, caching, load balancing and database choices."],["Apply for internships from month 2","Send 10 applications a week with a tailored resume."],["Contribute to open source","Start with documentation fixes, then small bugs."],["Reach 300 problems solved","Focus on hard graph and DP problems."],["Do 5 mock interviews","Ask friends or seniors to grade you honestly."]],
+ skills:["React / Node","Cloud basics","System design","APIs","Docker"],goal:"Goal: one internship and three projects live online."},
+{t:"Year 4",n:"Placement season",d:"Turn your preparation into offers from the best companies.",
+ tasks:[["Polish a one-page resume","Lead with impact, numbers and links to live projects."],["Revise core subjects weekly","OOP, DBMS, OS, networks and your language."],["Practise company-tagged problems","Target the firms you want and study their patterns."],["Run 10 more mock interviews","Include behavioural rounds and system design."],["Apply to 50+ companies","Use referrals, campus drives and job portals together."],["Compare offers and negotiate","Weigh salary, growth, team and learning."]],
+ skills:["Interview skills","Resume","Negotiation","Revision"],goal:"Goal: multiple offers and a high-package role."}
+];
+var KEY="offerpath-v1",st={},cur=0;
+try{st=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){st={}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+function yd(i){var c=0;Y[i].tasks.forEach(function(_,j){if(st[i+"-"+j])c++});return c}
+function stats(){var d=0,t=0;Y.forEach(function(y,i){d+=yd(i);t+=y.tasks.length});
+ var p=Math.round(d/t*100);
+ document.getElementById("count").textContent=d+" of "+t+" tasks";
+ document.getElementById("pct").textContent=p+"%";
+ document.getElementById("fill").style.width=p+"%";
+ Y.forEach(function(y,i){document.getElementById("s"+i).classList.toggle("done",yd(i)===y.tasks.length)});
+ document.querySelectorAll(".tab small").forEach(function(el,i){el.textContent=yd(i)+"/"+Y[i].tasks.length+" done"})}
+function tabs(){var h="";Y.forEach(function(y,i){h+='<button class="tab" role="tab" aria-selected="'+(i===cur)+'" data-i="'+i+'"><strong>'+y.t+'</strong><small></small></button>'});
+ var el=document.getElementById("tabs");el.innerHTML=h;
+ el.querySelectorAll(".tab").forEach(function(b){b.onclick=function(){cur=+b.dataset.i;tabs();panel();stats()}})}
+function panel(){var y=Y[cur],h='<div class="card"><h3>'+y.n+'</h3><p class="sub">'+y.d+'</p>';
+ y.tasks.forEach(function(t,j){var k=cur+"-"+j;h+='<label class="task"><input type="checkbox" data-k="'+k+'"'+(st[k]?" checked":"")+'><span><b>'+t[0]+'</b><small>'+t[1]+'</small></span></label>'});
+ h+='</div><div class="card"><h3>Skills to own</h3><ul class="chips">';
+ y.skills.concat(PA[path].s[cur]).forEach(function(s){h+="<li>"+s+"</li>"});
+ h+='</ul><div class="goal"><b>'+y.goal+'</b></div></div><div class="card wide"><h3>Project to ship this year: '+PA[path].n+' track</h3><p class="sub" style="margin:0">'+PA[path].p[cur]+'</p></div>';
+ var p=document.getElementById("panel");p.innerHTML=h;
+ p.querySelectorAll("input").forEach(function(c){c.onchange=function(){if(c.checked)st[c.dataset.k]=1;else delete st[c.dataset.k];save();stats()}})}
+document.getElementById("reset").onclick=function(){if(confirm("Clear all saved progress?")){st={};save();panel();stats()}};
+document.getElementById("theme").onclick=function(){var r=document.documentElement,dk=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dk?"light":"dark"};
+var PA={
+web:{n:"Web",s:[["HTML and CSS"],["React","Node.js","SQL"],["Next.js","Docker","AWS basics"],["System design","Testing"]],p:["A personal portfolio site, published online.","An expense tracker with login and a database.","A real-time chat or e-commerce app with a live link.","A SaaS-style product with payments and users."]},
+ai:{n:"AI",s:[["Python","NumPy"],["Pandas","ML basics","Statistics"],["PyTorch","LLM APIs","Model deployment"],["RAG apps","Paper reading"]],p:["A number-guessing bot with a simple scoring system.","A price predictor trained on a public dataset.","A resume screener built on an LLM API.","A document Q&A chatbot with retrieval, deployed."]},
+data:{n:"Data",s:[["Excel","SQL"],["Advanced SQL","Python","Power BI"],["Spark","Airflow","Cloud warehouse"],["Dashboards","Case studies"]],p:["A cleaned dataset with a short written analysis.","A sales dashboard with live filters.","An automated pipeline that loads data daily.","An end-to-end analytics case study for a real business."]},
+cyber:{n:"Security",s:[["Networking","Linux"],["Wireshark","Python scripting"],["OWASP Top 10","CTF practice"],["Cloud security","Report writing"]],p:["A home lab on a virtual machine with notes.","A port scanner and a log analyser in Python.","Write-ups for 10 CTF challenges on GitHub.","A full security audit report of a test web app."]}};
+var path=st._p||"web";if(!PA[path])path="web";
+function paths(){var h="<span>Your track:</span>";Object.keys(PA).forEach(function(k){h+='<button class="pb" data-k="'+k+'" aria-pressed="'+(k===path)+'">'+PA[k].n+"</button>"});
+ var el=document.getElementById("paths");el.innerHTML=h;
+ el.querySelectorAll(".pb").forEach(function(b){b.onclick=function(){path=b.dataset.k;st._p=path;save();paths();panel()}})}
+paths();tabs();panel();stats();
+</script>
+</body>
+</html>
